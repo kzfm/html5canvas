@@ -5,6 +5,8 @@
 install
 -------
 
+clone git and install dependent module::
+
     git clone git\@github.com:kzfm/html5canvas.git
     cd html5canvas
     npm install -d
