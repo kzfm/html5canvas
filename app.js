@@ -40,6 +40,12 @@ app.get('/1-3', function(req, res){
   });
 });
 
+app.get('/1-4', function(req, res){
+  res.render('1-4', {
+    title: 'HTML CANVAS 1-4'
+  });
+});
+
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
