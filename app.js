@@ -34,17 +34,13 @@ app.get('/', function(req, res){
   });
 });
 
-app.get('/1-3', function(req, res){
-  res.render('1-3', {
-    title: 'HTML CANVAS 1-3'
+app.get('/:chapter', function(req, res){
+  var chp = req.params.chapter;
+  res.render(chp, {
+    title: 'HTML CANVAS ' + chp
   });
 });
 
-app.get('/1-4', function(req, res){
-  res.render('1-4', {
-    title: 'HTML CANVAS 1-4'
-  });
-});
 
 
 app.listen(3000);
