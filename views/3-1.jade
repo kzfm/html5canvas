@@ -1,0 +1,14 @@
+h1= title
+div(style="position: absolute; top: 150px; left: 50px")
+  canvas#canvasOne(width=500,height=300) your browser does not support HTML5 Canvas.
+  form
+    Text:
+    input#textBox(placeholder="your text")
+    br
+    Fill Or Stroke:
+    select#fillOrStroke
+      option(value="fill") fill
+      option(value="stroke") stroke
+      option(value="both") both
+    br
+script(type="text/coffeescript", src='/javascripts/3-1.coffee')
