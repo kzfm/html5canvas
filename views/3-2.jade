@@ -1,0 +1,59 @@
+h1= title
+div(style="position: absolute; top: 150px; left: 50px")
+  canvas#canvasOne(width=500,height=300) your browser does not support HTML5 Canvas.
+  form
+    Text:
+    input#textBox(placeholder="your text")
+    br
+    Fill Or Stroke:
+    select#fillOrStroke
+      option(value="fill") fill
+      option(value="stroke") stroke
+      option(value="both") both
+    br
+    Text Font:
+    select#textFont
+      option(value="serif") serif
+      option(value="sans-serif") sans-serif
+      option(value="cursive") cursive
+      option(value="fantasy") fantasy
+      option(value="monospace") monospace
+    br
+    Font Size:
+    input#fontSize(type="range", min="0", max="200", step="1", value="50")
+    br
+    Text Color:
+    input#textFillColor.color(value="#FF0000")
+    br
+    Font Weight:
+    select#fontWeight
+      option(value="normal") normal
+      option(value="bold") bold
+      option(value="bolder") bolder
+      option(value="lighter") lighter
+    br
+    Font Style:
+    select#fontStyle
+      option(value="normal") normal
+      option(value="italic") italic
+      option(value="oblique") oblique
+    br
+    Text Baseline:
+    select#textBaseline
+      option(value="middle") middle
+      option(value="top") top
+      option(value="hanging") hanging
+      option(value="alphabetic") alphabetic
+      option(value="ideographic") ideographic
+      option(value="bottom") bottom
+    br
+    Text Align:
+    select#textAlign
+      option(value="center") center
+      option(value="start") start
+      option(value="end") end
+      option(value="left") left
+      option(value="right") right
+
+script(type="text/javascript", src='/javascripts/jscolor/jscolor.js')
+script(type="text/coffeescript", src='/javascripts/3-2.coffee')
