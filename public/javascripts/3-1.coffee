@@ -38,15 +38,8 @@ canvasApp = ->
         context.strokeStyle = "#000000"
         context.strokeText(message, xPosition, yPositon)
 
-  textBoxChanged = (e) ->
-    target = e.target
-    message = target.value
-    drawScreen()
-
-  fillOrStrokeChanged = (e) ->
-    target = e.target
-    fillOrStroke = target.value
-    drawScreen()
+  textBoxChanged = (e) -> message = e.target.value; drawScreen()
+  fillOrStrokeChanged = (e) -> fillOrStroke = e.target.value; drawScreen()
 
   formElement = document.getElementById("textBox")
   formElement.addEventListener("keyup", textBoxChanged, false)
