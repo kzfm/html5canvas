@@ -1,0 +1,14 @@
+!!! 5
+h1= title
+div
+	canvas#canvas(width=500,height=500,style="position: absolute; top: 250px; left: 50px") your browser does not support HTML5 Canvas.
+	form
+	p Canvas Width
+	input#canvasWidth(type="range", min="0", max="1000", step="1", value="500")
+	br
+	p Canvas Height
+	input#canvasHeight(type="range", min="0", max="1000", step="1", value="500")
+	br
+		
+script(type="text/coffeescript", src='/javascripts/5-6.coffee')
+
