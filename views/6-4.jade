@@ -1,0 +1,19 @@
+!!! 5
+h1= title
+form Video Size:
+  input#videoSize(type="range",min="80",max="1280",step="1",value="320")
+
+div
+  video#theVideo(width=320,height=240,autoplay,loop,controls)
+    source(src="/videos/sample.ogv",type='video/ogg; codecs="vp8, vorbis"')
+
+script(type="text/coffeescript")
+  |videoSizeChanged = (e) ->
+  |  target = e.target
+  |  videoElement = document.getElementById("theVideo")
+  |  videoElement.width = target.value
+  |  videoElement.height = target.value/widthtoHeightRatio
+  |sizeElement = document.getElementById("videoSize")
+  |sizeElement.addEventListener('change', videoSizeChanged, false)
+  |videoElement = document.getElementById("theVideo")
+  |widthtoHeightRatio = videoElement.width/videoElement.height
