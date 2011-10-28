@@ -1,0 +1,13 @@
+!!! 5
+h1= title
+div(style="position:absolute; top:150px; left:50px;")
+  canvas#canvasOne(width=500,height=300) your browser does not support HTML5 Canvas.
+
+div#loadingStatus 0%
+
+div(style="position:absolute; top:150px; left:600px;")
+  audio#theAudio(controls) your browser does not support audio element.
+    source(src="/audios/audio.mp3",type="audio/mp3")
+    source(src="/audios/audio.ogg",type="audio/ogg")
+
+script(type="text/coffeescript", src='/javascripts/7-3.coffee')
