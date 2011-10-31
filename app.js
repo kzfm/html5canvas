@@ -16,6 +16,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+  app.use(express.favicon());
 });
 
 app.configure('development', function(){
@@ -40,7 +41,6 @@ app.get('/:chapter', function(req, res){
     title: 'HTML CANVAS ' + chp
   });
 });
-
 
 
 app.listen(3000);
