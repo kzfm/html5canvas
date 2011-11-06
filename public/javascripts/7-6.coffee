@@ -135,14 +135,16 @@ drawScreen = ->
   aliens.reverse()
   missiles.reverse()
 
-  for m,i in missiles.reverse()
-    for a,j in aliens.reverse()
-      if hitTest(m,a)
-        playSound(SOUND_EXPLODE, 0.5)
-        missiles.splice(i,1)
-        aliens.splice(j,1)
-        #`break missile`
-    appState = STATE_RESET if aliens.length <= 0
+  missilecheck = () ->
+    for m,i in missiles.reverse()
+      for a,j in aliens.reverse()
+        if hitTest(m,a)
+          playSound(SOUND_EXPLODE, 0.5)
+          missiles.splice(i,1)
+          aliens.splice(j,1)
+          return
+      appState = STATE_RESET if aliens.length <= 0
+  missilecheck()
 
   context.fillStyle = "#ffffff"
   context.fillRect(0, 0, theCanvas.width, theCanvas.height)
